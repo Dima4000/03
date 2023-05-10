@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    #contact-form {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      background-color: #f1f1f1;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    #contact-form label {
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    #contact-form textarea {
+      height: 100px;
+    }
+    #contact-form input[type="submit"] {
+      margin-top: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      cursor: pointer;
+    }
+    #contact-form input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+    #contact-form select {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <form id="contact-form">
+    <input type="hidden" name="contact_number">
+    <label>Name</label>
+    <input type="text" name="user_name" required>
+    <label>Email</label>
+    <input type="email" name="user_email" required>
+    <label>Phone Number</label>
+    <input type="tel" name="user_phone" required>
+    <label>Message</label>
+    <textarea name="message" required></textarea>
+    <label>What is your favorite color?</label>
+    <select name="color">
+      <option value="blue">Blue</option>
+      <option value="yellow">Yellow</option>
+    </select>
+    <input type="submit" value="Send">
+  </form>
+</body>
+</html>
